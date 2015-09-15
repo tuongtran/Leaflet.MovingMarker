@@ -39,6 +39,14 @@ L.Marker.MovingMarker = L.Marker.extend({
         this._animRequested = false;
         this._currentLine = [];
     },
+	
+	getDurations: function(){
+		return this._durations;
+	},
+	
+	setDurations: function(durations){
+		this._durations = durations;
+	},
 
     isRunning: function() {
         return this._state === L.Marker.MovingMarker.runState;
